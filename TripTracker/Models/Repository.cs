@@ -37,6 +37,11 @@ namespace TripTracker.Models
             return MyTrips;
         }
 
+        public Trip Get(int id)
+        {
+            return MyTrips.First(t => t.Id == id);
+        }
+
         public void Add(Trip newTrip)
         {
             MyTrips.Add(newTrip);
